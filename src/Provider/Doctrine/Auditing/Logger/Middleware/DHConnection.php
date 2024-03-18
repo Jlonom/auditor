@@ -29,13 +29,13 @@ final class DHConnection extends AbstractConnectionMiddleware
 
         $this->DHDriver->resetDHFlusherList();
 
-        return parent::commit();
+        parent::commit();
     }
 
     public function rollBack(): void
     {
         $this->DHDriver->resetDHFlusherList();
 
-        return parent::rollBack();
+        parent::rollBack();
     }
 }
